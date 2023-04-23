@@ -53,7 +53,7 @@ Die \autoref{tab:MesswerteBrech} zeigt die Messwerte, die sowohl für die Auswer
         50\pm 1& 31\pm 1&1.49\pm 0.05\\
         60\pm 1& 35\pm 1&1.51\pm 0.04\\
         70\pm 1& 39\pm 1&1.49\pm 0.03\\
-        80\pm 1& 41\pm 1& 1.501\pm 0.03\\ 
+        80\pm 1& 41\pm 1& 1.50\pm 0.03\\ 
         \bottomrule
     \end{tabular}
     \label{tab:MesswerteBrech}
@@ -171,9 +171,14 @@ So ergeben sich für die unterschiedlichen Ablenkungen $\delta_{\text{n}}$ die i
     \end{tabular}
     \label{tab:MesswertePrism2}
 \end{table}
+
 \subsection{Beugung am Gitter}
 \label{sec:Beugung am Gitter}
-
+Um die jeweiligen Wellenlängen zu berechnen, wird die \autoref{eqn:Gitter} nach $\lambda$ umgestellt
+\begin{equation*}
+    \lamda= d \, \frac{\sin \alpha}{k}\quad .
+\end{equation*}
+Damit dei Wellenlänge möglichst genau bestimmt werden kann, wird die Wellenlänge zu jedem Maximum bestimmt und später ein Mittelwert aus diesen gebildet.
 \begin{table}
     \centering
         \caption{Maxima des Gitters mit Gitterkonstante $d = 0.00167 \, \unit{\frac{1}{\milli \meter}}$.}
@@ -184,9 +189,13 @@ So ergeben sich für die unterschiedlichen Ablenkungen $\delta_{\text{n}}$ die i
         1 & 19\pm 1 & 23\pm 1\\
         \bottomrule
     \end{tabular}
-    \label{tab:MesswertePrism}
+    \label{tab:Gitter600}
 \end{table}
-
+Für die in \autoref{tab:Gitter} dargestellten Maxima ergeben sich so die Wellenlängen
+\begin{align*}
+    \lambda_{\text{rot}}=(6.53\pm 0.27)\cdot 10^{-7} \, \unit{\meter}=653\,\unit{\nano \meter}
+    \lambda_{\text{grün}}=(5.44\pm 0.28)\cdot 10^{-7} \, \unit{\meter}=653\,\unit{\nano \meter}
+\end{align*}
 \begin{table}
     \centering
     \caption{Maxima des Gitters mit Gitterkonstante $d = 0.03300 \, \unit{\frac{1}{\milli \meter}}$.}
@@ -199,9 +208,24 @@ So ergeben sich für die unterschiedlichen Ablenkungen $\delta_{\text{n}}$ die i
         3 & 28\pm 1& 34\pm 1\\
         \bottomrule
     \end{tabular}
-    \label{tab:MesswertePrism}
+    \label{tab:Gitter300}
 \end{table}
+Für grünes Licht ergeben sich so 
+\begin{align*}
+    \lambda_1&=(5.20\pm 0.60)\cdot 10^{-7}\,\unit{\meter}=(520\pm 60)\, \unit{\nano \meter}\. , \\
+    \lambda_2&=(5.15\pm 0.28)\cdot 10^{-7}\,\unit{\meter}=(515\pm 28)\, \unit{\nano \meter}\. , \\
+    \lambda_3&=(5.21\pm 0.17)\cdot 10^{-7}\,\unit{\meter}=(521\pm 17)\, \unit{\nano \meter}\. , \\
+    \bar{\lambda}&=(5.19\pm 0.23)\cdot 10^{-7}\,\unit{\meter}\. .
+\end{align*}
 
+
+Für rotes Licht ergeben sich folgende Werte
+\begin{align*}
+    \lambda_1& = (6.40\pm 0.60)\cdot 10^{-7} \,\unit{\meter}=(640\pm 60)\, \unit{\nano \meter}\. , \\
+    \lambda_2& = (6.24\pm 0.27)\cdot 10^{-7} \,\unit{\meter}=(624\pm 27)\, \unit{\nano \meter}\. , \\
+    \lambda_3& = (6.21\pm 0.16)\cdot 10^{-7} \,\unit{\meter}=(621\pm 16)\, \unit{\nano \meter}\. ,\\
+    \bar{\lambda}& =(6.28\pm 0.23)\cdot 10^{-7} \,\unit{\meter}\. .
+\end{align*}
 \begin{table}
     \centering
         \caption{Maxima des Gitters mit Gitterkonstante $d = 0.01000 \, \unit{\frac{1}{\milli \meter}}$.}
@@ -209,7 +233,7 @@ So ergeben sich für die unterschiedlichen Ablenkungen $\delta_{\text{n}}$ die i
         \toprule
         $n$ des Maximums&Peak rotes Licht $\beta_1 \mathrm{/} \unit{\degree}$ & Peak grünes Licht $\beta_1 \mathrm{/} \unit{\degree}$\\
         \midrule
-        1 & 3\pm 1 & 3\pm 1 \\
+        1 & 3\pm 1 & 4\pm 1 \\
         2 & 6\pm 1 & 7\pm 1 \\
         3 & 9\pm 1 & 11\pm 1 \\
         4 & 12\pm 1 & 15\pm 1 \\
@@ -218,5 +242,26 @@ So ergeben sich für die unterschiedlichen Ablenkungen $\delta_{\text{n}}$ die i
         7 & 22\pm 1 & NaN\\
         \bottomrule
     \end{tabular}
-    \label{tab:MesswertePrism}
+    \label{tab:Gitter100}
 \end{table}
+Für das gröbste Gitter ergeben sich so die Werte folgende Werte für grünes Licht
+\begin{align*}
+    \lambda_1& =(5.20\pm 1.70)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_2& =(5.20\pm 0.90)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_3& =(5.20\pm 0.60)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_4& =(5.20\pm 0.40)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_5& =(5.18\pm 0.34)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_6& =(5.43\pm 0.28)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_7& =(5.35\pm 0.23)\cdot 10^{-7}\,\unit{\meter}\\
+    \bar{\lambda}&=(5.25\pm 0.53)\cdot 10^{-7}\,\unit{\meter}
+\end{align*}
+und für rotes Licht
+\begin{align*}
+    \lambda_1& =(7.00\pm 1.70)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_2& =(6.10\pm 0.90)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_3& =(6.40\pm 0.60)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_4& =(6.50\pm 0.40)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_5& =(6.51\pm 0.33)\cdot 10^{-7}\,\unit{\meter}\\
+    \lambda_6& =(6.51\pm 0.27)\cdot 10^{-7}\,\unit{\meter}\\
+    bar{\lambda}&=(6.50\pm 0.56)\cdot 10^{-7}\,\unit{\meter}
+\end{align*}

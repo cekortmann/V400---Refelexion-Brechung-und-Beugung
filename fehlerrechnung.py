@@ -96,8 +96,8 @@ sv2=[Strahlenversatz(ua1, bneu[0]),Strahlenversatz(ua2, bneu[1]),Strahlenversatz
 #for x in sv1:
 #    print(x)
 
-#print('sv1',sv1)
-#print('sv2',sv2)
+print('sv1',sv1)
+print('sv2',sv2)
 #print('bneu',bneu)
 
 #Prisma
@@ -136,17 +136,48 @@ i=0
 #print(gb2)
 
 #Gitter
-Gitterk= unp.uarray([1,2,3,4,5,6,7],[0,0,0,0,0,0,0])
-d=unp.uarray([1,67*10**(-6)],[0])
-ur600phi= unp.uarray([19],[1])
-ug600phi= unp.uarray([23],[1])
-t=0
+Gitterk= unp.uarray([1,2,3,4,5,6,7,8],[0,0,0,0,0,0,0,0])
+d600= ufloat(1.67*10**(-6),0)
+d300= ufloat(3.33*10**(-6),0)
+d100= ufloat(1*10**(-5),0)
+ug600phi= ufloat(19,1)
+ur600phi= ufloat(23,1)
+ug300phi= unp.uarray([9,18,28],[1,1,1])
+ur300phi= unp.uarray([11,22,34],[1,1,1])
+ug100phi= unp.uarray([3,6,9,12,15,19,22],[1,1,1,1,1,1,1])
+ur100phi= unp.uarray([4,7,11,15,19,23,0],[1,1,1,1,1,1,0])
+
+
 def Lambda(phi,d,k):
-    return (d*sin(phi*np.pi/180)*1/k)
+    t=1
+    while t<=k:   
+        return (d*sin(phi*np.pi/180)/k)
+        t+=1
+def Lambda2(phi,d,k,Gitterk):
+    t=1
+    while t-1<k:
+        print('maximum',t,d*sin(phi[t-1]*np.pi/180)/Gitterk[t-1])
+        t+=1
+ug1300= ufloat(5.2,0.6)
+ug2300= ufloat(5.15,0.28)
+ug3300= ufloat(5.21,0.17)
 
-#while t<k:   
-#    print(d*sin(phi)/k)
+ur1300= ufloat(6.4,0.6)
+ur2300= ufloat(6.24,0.27)
+ur3300= ufloat(6.21,0.16)
 
+def Mittelwert3(a,b,c):
+    return (a+b+c)/3
+    
 
-print('lamda rot', Lambda(19,d,1))
-print('lambda grün', Lambda(23,d,1))
+#print('lambda rot 600', Lambda(ur600phi,d600,1))
+#print('lambda grün 600', Lambda(ug600phi,d600,1))
+
+#print('lambda grün 300')
+#print(Lambda2(ug300phi,d300,3,Gitterk))
+#print('lambda rot 300')
+#print(Lambda2(ur300phi,d300,3,Gitterk))
+#print('mittelwert300grün',Mittelwert3(ug1300,ug2300,ug3300))
+#print('mittelwert300rot',Mittelwert3(ur1300,ur2300,ur3300))
+#print(Lambda2(ug100phi,d100,7,Gitterk))
+#print(Lambda2(ur100phi,d100,6,Gitterk))
