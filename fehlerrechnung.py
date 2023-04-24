@@ -81,13 +81,13 @@ avgn= Mittelwert(un1,un2,un3,un4,un5,un6,un7,un8)
 #Strahlenversatz
 d=5.85
 def Strahlenversatz(a,b):
-    return 5.85*sin((a-b)*np.pi/180)/cos(b)
+    return 5.85*sin((a*np.pi/180-b*np.pi/180))/cos(b*np.pi/180)
 
 un1= ufloat(1.51,0.05)
 bneu=[0,0,0,0,0,0,0,0]
 i=0
 while i<8:
-    bneu[i]+=asin(sin(a[i]*np.pi/180)/un1)*180/np.pi
+    bneu[i]+=asin(sin(a[i]*np.pi/180)/un1)
     i+=1
 
 sv1=[Strahlenversatz(ua1, ub1),Strahlenversatz(ua2, ub2),Strahlenversatz(ua3, ub3),Strahlenversatz(ua4, ub4),Strahlenversatz(ua5, ub5),Strahlenversatz(ua6, ub6),Strahlenversatz(ua7, ub7),Strahlenversatz(ua8, ub8)]
