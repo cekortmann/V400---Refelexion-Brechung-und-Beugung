@@ -87,7 +87,7 @@ un1= ufloat(1.51,0.05)
 bneu=[0,0,0,0,0,0,0,0]
 i=0
 while i<8:
-    bneu[i]+=asin(sin(a[i]*np.pi/180)/un1)
+    bneu[i]+=asin(sin(a[i]*np.pi/180)/un1)*180/np.pi
     i+=1
 
 sv1=[Strahlenversatz(ua1, ub1),Strahlenversatz(ua2, ub2),Strahlenversatz(ua3, ub3),Strahlenversatz(ua4, ub4),Strahlenversatz(ua5, ub5),Strahlenversatz(ua6, ub6),Strahlenversatz(ua7, ub7),Strahlenversatz(ua8, ub8)]
